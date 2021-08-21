@@ -3,7 +3,7 @@
 require('./db/mongoose');
 const express = require('express');
 const app = express();
-const port = 3001;
+const port = process.env.PORT || 3001;
 const Producto = require('./model/productos');
 
 app.use(express.json());
