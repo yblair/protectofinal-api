@@ -1,0 +1,23 @@
+{
+  "name": "proyecto-final-api",
+  "version": "1.0.0",
+  "description": "\"# proyecto-web-api\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yblair/proyecto-web-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yblair/proyecto-web-api/issues"
+  },
+  "homepage": "https://github.com/yblair/proyecto-web-api#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.13.5"
+  }
+}
