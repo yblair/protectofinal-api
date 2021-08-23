@@ -31,6 +31,34 @@ app.get('/producto/:id', (req, res) => {
   
 });
 
+app.get('/botas', (req, res) => {
+    const query = { category: 'botas'};
+    Producto.findById(query)
+     .then((producto) => {
+      if(!producto) {
+          return res.status(404).send("Producto no encontrado");
+      }
+          
+      res.status(200).send(producto)
+      })
+     .catch(err => res.status(404).send(err))
+    
+  });
+
+  app.get('/zapatos', (req, res) => {
+      const category = req.params.category
+      Producto.find({ category: "zapatos"})
+      .then((producto) => {
+      if(!producto) {
+          return res.status(404).send("Producto no encontrado");
+      }
+          
+      res.status(200).send(producto)
+      })
+     .catch(err => res.status(404).send(err))
+    
+  });
+
 // Create -- Agregar Productos a la DB
 app.post('/producto', (req, res) => {
     const producto = new Producto(req.body)
